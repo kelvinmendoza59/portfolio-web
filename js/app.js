@@ -199,3 +199,6 @@ window.addEventListener('scroll', () => {
         header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
     }
 });
+
+// Scroll to top button (future enhancement)
+// TODO: Add scroll to top button for better UX
