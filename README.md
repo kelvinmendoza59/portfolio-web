@@ -25,6 +25,20 @@ Mi portfolio personal desarrollado con HTML5, CSS3 y JavaScript vanilla.
 
 Simplemente abre `index.html` en tu navegador web.
 
+## Instalación
+
+No requiere instalación. Simplemente clona el repositorio y abre `index.html` en tu navegador.
+
+```bash
+git clone https://github.com/kelvinmendoza59/portfolio-web.git
+cd portfolio-web
+# Abre index.html en tu navegador
+```
+
 ## Estado
 
 ✅ Proyecto completado
+
+## Autor
+
+Kelvin Mendoza - [GitHub](https://github.com/kelvinmendoza59)
