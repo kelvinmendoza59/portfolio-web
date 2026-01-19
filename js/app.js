@@ -2,12 +2,13 @@
 const projects = [
     {
         title: "Riptoforex.com",
-        description: "Financial news platform for Forex & Crypto traders | Next.js + FastAPI + PostgreSQL",
+        description: "Financial news platform serving Forex & Crypto traders worldwide with real-time market updates",
         category: "featured",
         tech: ["Next.js", "TypeScript", "FastAPI", "PostgreSQL"],
-        link: "https://github.com/kelvinmendoza59/Riptoforex-2025",
+        link: null,
         demo: "https://riptoforex.com",
-        featured: true
+        featured: true,
+        privateCode: true
     },
     {
         title: "SecureAuth",
@@ -96,7 +97,8 @@ function renderProjects(filter = 'all') {
         projectCard.setAttribute('data-category', project.category);
 
         const techStack = project.tech ? `<div class="tech-stack">${project.tech.map(t => `<span class="tech-badge">${t}</span>`).join('')}</div>` : '';
-        const demoLink = project.demo ? `<a href="${project.demo}" target="_blank" class="demo-link">Live Demo</a>` : '';
+        const demoLink = project.demo ? `<a href="${project.demo}" target="_blank" class="demo-link">Live Demo <i class="fas fa-external-link-alt"></i></a>` : '';
+        const githubLink = project.link ? `<a href="${project.link}" target="_blank" class="project-link">GitHub <i class="fab fa-github"></i></a>` : '<span class="private-code"><i class="fas fa-lock"></i> Private Repository</span>';
 
         projectCard.innerHTML = `
             ${project.featured ? '<span class="featured-badge">⭐ Featured</span>' : ''}
@@ -105,7 +107,7 @@ function renderProjects(filter = 'all') {
             <p>${project.description}</p>
             ${techStack}
             <div class="project-links">
-                <a href="${project.link}" target="_blank" class="project-link">GitHub <i class="fab fa-github"></i></a>
+                ${githubLink}
                 ${demoLink}
             </div>
         `;
