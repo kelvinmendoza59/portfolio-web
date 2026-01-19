@@ -375,6 +375,146 @@ section {
     color: var(--primary-color);
 }
 
+/* Hero Credentials */
+.hero-credentials {
+    font-size: 1rem;
+    margin: 1rem 0;
+    opacity: 0.9;
+}
+
+/* Skills Title */
+.skills-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 2rem 0 1.5rem;
+    color: var(--text-color);
+}
+
+/* Featured Project Card */
+.project-card.featured {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #5dade2 100%);
+    color: white;
+    grid-column: span 2;
+    position: relative;
+}
+
+.project-card.featured h3,
+.project-card.featured p {
+    color: white;
+}
+
+.featured-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #f39c12;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Tech Stack */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.tech-badge {
+    background-color: rgba(52, 152, 219, 0.1);
+    color: var(--primary-color);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    border: 1px solid var(--primary-color);
+}
+
+.project-card.featured .tech-badge {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-color: white;
+}
+
+/* Project Links */
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.demo-link {
+    color: #2ecc71;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.demo-link:hover {
+    text-decoration: underline;
+}
+
+.project-card.featured .demo-link {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.project-card.featured .project-link {
+    color: white;
+}
+
+/* Contact Methods */
+.contact-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.contact-method:hover {
+    transform: translateY(-5px);
+    color: var(--primary-color);
+}
+
+.contact-method i {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+}
+
+/* Footer Location */
+.footer-location {
+    margin-top: 0.5rem;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .nav-links {
@@ -392,5 +532,18 @@ section {
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .project-card.featured {
+        grid-column: span 1;
+    }
+
+    .contact-methods {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
 }

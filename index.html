@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kelvin Mendoza - Portfolio</title>
+    <meta name="description" content="Kelvin Mendoza - Full-stack Developer & AI Engineer. Creator of Riptoforex.com. Specializing in Next.js, Python, TypeScript, and modern web technologies.">
+    <meta name="keywords" content="Full-stack Developer, AI Engineer, Next.js, Python, TypeScript, Web Development, Software Engineer">
+    <title>Kelvin Mendoza - Full-stack Developer & AI Engineer</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Header / Navigation -->
@@ -14,10 +16,10 @@
             <div class="container">
                 <h1 class="logo">KM</h1>
                 <ul class="nav-links">
-                    <li><a href="#home" class="nav-link">Inicio</a></li>
-                    <li><a href="#about" class="nav-link">Sobre mí</a></li>
-                    <li><a href="#projects" class="nav-link">Proyectos</a></li>
-                    <li><a href="#contact" class="nav-link">Contacto</a></li>
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
                 <button id="theme-toggle" class="theme-toggle">
                     <i class="fas fa-moon"></i>
@@ -30,14 +32,19 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Hola, soy <span class="highlight">Kelvin Mendoza</span></h1>
-                <p class="hero-subtitle">Desarrollador Full Stack</p>
+                <h1 class="hero-title">Hi, I'm <span class="highlight">Kelvin Mendoza</span></h1>
+                <p class="hero-subtitle">Full-stack Developer + AI Engineer</p>
                 <p class="hero-description">
-                    Me especializo en crear aplicaciones web con Java, Python y JavaScript
+                    Founder of <strong>Riptoforex.com</strong> | Building modern web applications with Next.js, Python & TypeScript
+                </p>
+                <p class="hero-credentials">
+                    🎓 CS50x Harvard Graduate | 🚀 AI Master Student | 📍 Georgia, USA
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
-                    <a href="#contact" class="btn btn-secondary">Contactar</a>
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="https://github.com/kelvinmendoza59" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
                 </div>
             </div>
         </div>
@@ -46,29 +53,50 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">Sobre mí</h2>
+            <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <p>
-                    Soy un desarrollador full stack apasionado por crear soluciones tecnológicas
-                    innovadoras. Con experiencia en desarrollo backend y frontend, me enfoco en
-                    escribir código limpio y mantenible.
+                    I'm a full-stack developer and AI engineer passionate about building innovative tech solutions.
+                    Originally from Venezuela, with professional experience in Peru, now based in Georgia, USA.
                 </p>
+                <p>
+                    I specialize in modern web technologies and AI integration, with a focus on clean,
+                    maintainable code and scalable architectures. Currently pursuing a Master's in AI Development
+                    while building real-world applications that serve users globally.
+                </p>
+                <h3 class="skills-title">Tech Stack</h3>
                 <div class="skills">
                     <div class="skill-item">
-                        <i class="fab fa-java"></i>
-                        <span>Java</span>
+                        <i class="fab fa-react"></i>
+                        <span>Next.js / React</span>
                     </div>
                     <div class="skill-item">
                         <i class="fab fa-python"></i>
-                        <span>Python</span>
+                        <span>Python / FastAPI</span>
                     </div>
                     <div class="skill-item">
-                        <i class="fab fa-js"></i>
-                        <span>JavaScript</span>
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js / Express</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-java"></i>
+                        <span>Java / Spring Boot</span>
                     </div>
                     <div class="skill-item">
                         <i class="fas fa-database"></i>
-                        <span>SQL</span>
+                        <span>PostgreSQL / MongoDB</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-docker"></i>
+                        <span>TypeScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-brain"></i>
+                        <span>AI / Machine Learning</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-git-alt"></i>
+                        <span>Git / GitHub</span>
                     </div>
                 </div>
             </div>
@@ -78,13 +106,14 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Mis Proyectos</h2>
+            <h2 class="section-title">My Projects</h2>
 
             <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="java">Java</button>
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="featured">Featured</button>
+                <button class="filter-btn" data-filter="javascript">JavaScript/Node.js</button>
                 <button class="filter-btn" data-filter="python">Python</button>
-                <button class="filter-btn" data-filter="javascript">JavaScript</button>
+                <button class="filter-btn" data-filter="java">Java</button>
             </div>
 
             <div class="projects-grid" id="projects-grid">
@@ -96,27 +125,44 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Contacto</h2>
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-intro">
+                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+            </p>
+            <div class="contact-methods">
+                <a href="mailto:kelvinmendoza309@gmail.com" class="contact-method">
+                    <i class="fas fa-envelope"></i>
+                    <span>kelvinmendoza309@gmail.com</span>
+                </a>
+                <a href="https://github.com/kelvinmendoza59" target="_blank" class="contact-method">
+                    <i class="fab fa-github"></i>
+                    <span>github.com/kelvinmendoza59</span>
+                </a>
+                <a href="https://riptoforex.com" target="_blank" class="contact-method">
+                    <i class="fas fa-globe"></i>
+                    <span>riptoforex.com</span>
+                </a>
+            </div>
             <form id="contact-form" class="contact-form">
                 <div class="form-group">
-                    <label for="name">Nombre</label>
-                    <input type="text" id="name" name="name" required>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
                     <span class="error-message" id="name-error"></span>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
                     <span class="error-message" id="email-error"></span>
                 </div>
                 <div class="form-group">
-                    <label for="message">Mensaje</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
                     <span class="error-message" id="message-error"></span>
                 </div>
-                <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
             <div id="form-success" class="success-message" style="display: none;">
-                ¡Mensaje enviado con éxito!
+                ✓ Message sent successfully! I'll get back to you soon.
             </div>
         </div>
     </section>
@@ -125,11 +171,18 @@
     <footer class="footer">
         <div class="container">
             <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/kelvinmendoza59" target="_blank" class="social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://riptoforex.com" target="_blank" class="social-link" aria-label="Website">
+                    <i class="fas fa-globe"></i>
+                </a>
+                <a href="mailto:kelvinmendoza309@gmail.com" class="social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
-            <p>&copy; 2021 Kelvin Mendoza. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Kelvin Mendoza. Built with passion and code.</p>
+            <p class="footer-location">📍 Georgia, United States</p>
         </div>
     </footer>
 

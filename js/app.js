@@ -1,40 +1,53 @@
 // Proyectos data
 const projects = [
     {
-        title: "Sistema de Gestión",
-        description: "Sistema de gestión de inventarios desarrollado con Spring Boot",
-        category: "java",
-        link: "#"
+        title: "Riptoforex.com",
+        description: "Financial news platform for Forex & Crypto traders | Next.js + FastAPI + PostgreSQL",
+        category: "featured",
+        tech: ["Next.js", "TypeScript", "FastAPI", "PostgreSQL"],
+        link: "https://github.com/kelvinmendoza59/Riptoforex-2025",
+        demo: "https://riptoforex.com",
+        featured: true
     },
     {
-        title: "API de Biblioteca",
-        description: "API REST para gestión de libros con Spring Boot y H2",
-        category: "java",
-        link: "#"
-    },
-    {
-        title: "App de Tareas",
-        description: "Aplicación web de tareas con Flask y SQLite",
-        category: "python",
-        link: "#"
-    },
-    {
-        title: "Task Manager",
-        description: "Gestor de tareas con Python, Flask y SQLAlchemy",
-        category: "python",
-        link: "#"
-    },
-    {
-        title: "API de Notas",
-        description: "API REST para gestión de notas con Node.js y Express",
+        title: "User Management API",
+        description: "REST API with JWT authentication and MongoDB | Node.js + Express",
         category: "javascript",
-        link: "#"
+        tech: ["Node.js", "Express", "MongoDB", "JWT"],
+        link: "https://github.com/kelvinmendoza59/user-management-api",
+        demo: null
     },
     {
-        title: "Weather App",
-        description: "Aplicación del clima con JavaScript vanilla",
+        title: "Task Manager API",
+        description: "Task management REST API with Flask and SQLAlchemy",
+        category: "python",
+        tech: ["Python", "Flask", "SQLAlchemy", "SQLite"],
+        link: "https://github.com/kelvinmendoza59/task-manager-api",
+        demo: null
+    },
+    {
+        title: "Biblioteca API",
+        description: "Library management REST API | Spring Boot + JPA + H2",
+        category: "java",
+        tech: ["Java", "Spring Boot", "JPA", "H2"],
+        link: "https://github.com/kelvinmendoza59/biblioteca-api-spring",
+        demo: null
+    },
+    {
+        title: "Notes API",
+        description: "Simple notes REST API built with Node.js and Express",
         category: "javascript",
-        link: "#"
+        tech: ["Node.js", "Express", "JavaScript"],
+        link: "https://github.com/kelvinmendoza59/api-notas-node",
+        demo: null
+    },
+    {
+        title: "CS50x Finance",
+        description: "Stock trading simulator with real-time quotes | Flask + SQLite",
+        category: "python",
+        tech: ["Python", "Flask", "SQLite", "IEX API"],
+        link: "https://github.com/kelvinmendoza59/finance",
+        demo: null
     }
 ];
 
@@ -79,14 +92,22 @@ function renderProjects(filter = 'all') {
 
     filteredProjects.forEach(project => {
         const projectCard = document.createElement('div');
-        projectCard.className = 'project-card';
+        projectCard.className = project.featured ? 'project-card featured' : 'project-card';
         projectCard.setAttribute('data-category', project.category);
 
+        const techStack = project.tech ? `<div class="tech-stack">${project.tech.map(t => `<span class="tech-badge">${t}</span>`).join('')}</div>` : '';
+        const demoLink = project.demo ? `<a href="${project.demo}" target="_blank" class="demo-link">Live Demo</a>` : '';
+
         projectCard.innerHTML = `
+            ${project.featured ? '<span class="featured-badge">⭐ Featured</span>' : ''}
             <span class="project-tag">${project.category.toUpperCase()}</span>
             <h3>${project.title}</h3>
             <p>${project.description}</p>
-            <a href="${project.link}" class="project-link">Ver proyecto <i class="fas fa-arrow-right"></i></a>
+            ${techStack}
+            <div class="project-links">
+                <a href="${project.link}" target="_blank" class="project-link">GitHub <i class="fab fa-github"></i></a>
+                ${demoLink}
+            </div>
         `;
 
         projectsGrid.appendChild(projectCard);
