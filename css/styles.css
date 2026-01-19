@@ -547,3 +547,51 @@ section {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
 }
+
+
+/* Education Section */
+.education {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 2rem auto 3rem;
+}
+
+.edu-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.edu-item:hover {
+    transform: translateY(-5px);
+}
+
+.edu-item i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-top: 0.3rem;
+}
+
+.edu-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.edu-details strong {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.edu-details span {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    opacity: 0.8;
+}
