@@ -10,32 +10,32 @@ const projects = [
         featured: true
     },
     {
-        title: "User Management API",
-        description: "REST API with JWT authentication and MongoDB | Node.js + Express",
+        title: "SecureAuth",
+        description: "Enterprise-grade user authentication system with JWT & role-based access control",
         category: "javascript",
         tech: ["Node.js", "Express", "MongoDB", "JWT"],
         link: "https://github.com/kelvinmendoza59/user-management-api",
         demo: null
     },
     {
-        title: "Task Manager API",
-        description: "Task management REST API with Flask and SQLAlchemy",
+        title: "TaskFlow",
+        description: "Productivity platform for task management with real-time updates",
         category: "python",
         tech: ["Python", "Flask", "SQLAlchemy", "SQLite"],
         link: "https://github.com/kelvinmendoza59/task-manager-api",
         demo: null
     },
     {
-        title: "Biblioteca API",
-        description: "Library management REST API | Spring Boot + JPA + H2",
+        title: "LibraryHub",
+        description: "Complete library management system with book inventory and member tracking",
         category: "java",
         tech: ["Java", "Spring Boot", "JPA", "H2"],
         link: "https://github.com/kelvinmendoza59/biblioteca-api-spring",
         demo: null
     },
     {
-        title: "Notes API",
-        description: "Simple notes REST API built with Node.js and Express",
+        title: "QuickNotes",
+        description: "Minimalist note-taking application with cloud sync capabilities",
         category: "javascript",
         tech: ["Node.js", "Express", "JavaScript"],
         link: "https://github.com/kelvinmendoza59/api-notas-node",
